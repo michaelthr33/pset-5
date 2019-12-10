@@ -38,8 +38,10 @@ const sayHello = function() {
     do
     {
       var message = prompt ("Message: ")
-      if (message.length>50){alert ("Your Message is too long. Keep it under 50 charachters.") }
-    } while(message.length>50)
+      if (message.length>50){
+        alert ("Your Message is too long. Keep it under 50 charachters.")
+      }
+    } while(message.length>50);
 
     ctx.font = "48px sans-serif";
     ctx.strokeText(message,30,70,994);
@@ -54,7 +56,8 @@ const drawRectangle = function() {
   const ctx = canvas.getContext('2d');
 
   ctx.fillStyle = 'green';
-  ctx.clearRect(10, 10, 15 0, 100);};
+  ctx.clearRect(10, 10, 150, 100);
+};
 
 /*
  * Exercise 3.
