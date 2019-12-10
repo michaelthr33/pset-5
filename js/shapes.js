@@ -55,6 +55,7 @@ const sayHello = function() {
 const rectangle = function() {
   var canvas = document.getElementById("student-canvas-2");
   const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
   do
   {
     var width = Number(prompt ("Width: "))
@@ -80,7 +81,9 @@ const rectangle = function() {
       alert("Your y-coordinate must be between 1 and 512")
     }
   }while(width>=1024||width<=1||width>=1024||height<=1||height>=512||x>=1024||x<=1||y<=1||y>=512)
-  ctx.clearRect(x, y, width, height);
+  ctx.beginPath();
+  ctx.rect(x, y, width, height);
+  ctx.stroke();
 };
 
 /*
