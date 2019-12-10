@@ -19,7 +19,7 @@ window.onload = function() {
     // equivalent set of six event listeners for your solutions. the first one is done for you.
 
     document.getElementById("hello").onclick = sayHello;
-    document.getElementById("rectangle").onclick = drawrectangle;
+    document.getElementById("rectangle").onclick = rectangle;
     document.getElementById("colored-rectangle").onclick = drawcoloredrectangle;
     document.getElementById("triangle").onclick = drawtriangle;
     document.getElementById("smile").onclick = drawsmile;
@@ -38,7 +38,8 @@ const sayHello = function() {
     do
     {
       var message = prompt ("Message: ")
-      if (message.length>50){
+      if (message.length>50)
+      {
         alert ("Your Message is too long. Keep it under 50 charachters.")
       }
     } while(message.length>50);
@@ -51,12 +52,35 @@ const sayHello = function() {
  * Exercise 2.
  */
 
-const drawRectangle = function() {
+const rectangle = function() {
   var canvas = document.getElementById("student-canvas-2");
   const ctx = canvas.getContext('2d');
+  do
+  {
+    var width = Number(prompt ("Width: "))
+    var height= Number(prompt ("Height: "))
+    var x = Number(prompt("X: "))
+    var y = Number(prompt("Y: "))
 
-  ctx.fillStyle = 'green';
-  ctx.clearRect(10, 10, 150, 100);
+    if (width>=1024||width<=1)
+    {
+      alert("Your width must be between 1 and 1024.")
+    }
+
+    else if (height<=1||height>=512)
+    {
+      alert("Your height must be between 1 and 512")
+    }
+    else if (x<=1||x>=1024)
+    {
+      alert("Your x-coordinate must be between 1 and 1024")
+    }
+    else if (y<=1||y>=512)
+    {
+      alert("Your y-coordinate must be between 1 and 512")
+    }
+  }while(width>=1024||width<=1||width>=1024||height<=1||height>=512||x>=1024||x<=1||y<=1||y>=512)
+  ctx.clearRect(x, y, width, height);
 };
 
 /*
