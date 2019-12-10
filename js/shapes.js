@@ -50,11 +50,11 @@ const sayHello = function() {
  */
 
 const drawRectangle = function() {
-  const canvas = document.getElementById("student-canvas-2");
+  var canvas = document.getElementById("student-canvas-2");
   const ctx = canvas.getContext('2d');
 
   ctx.fillStyle = 'green';
-  ctx.fillRect(10, 10, 150, 100);};
+  ctx.clearRect(10, 10, 15 0, 100);};
 
 /*
  * Exercise 3.
