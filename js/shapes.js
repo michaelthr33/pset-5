@@ -82,7 +82,7 @@ const rectangle = function() {
     }
   }while(width>=1024||width<=1||width>=1024||height<=1||height>=512||x>=1024||x<=1||y<=1||y>=512)
   ctx.beginPath();
-  ctx.rect(x, y, width, height);
+  ctx.rect (x, y, width, height);
   ctx.stroke();
 };
 
