@@ -90,9 +90,41 @@ const rectangle = function() {
  * Exercise 3.
  */
 
-const drawColoredRectangle = function() {
-    // write your exercise 3 code here
-};
+const drawColoredRectangle = function()
+{
+    var canvas = document.getElementById("student-canvas-3");
+    const ctx =canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    do
+    {
+       var color = string.toUpperCase(prompt ("Color: "))
+        if(color=="BLACK")
+        {
+          ctx.fillStyle="black";
+        }
+
+        else if(color=="BLUE")
+        {
+          ctx.fillStyle="blue";
+        }
+
+        else if(color=="GREEN")
+        {
+          ctx.fillStyle="green";
+        }
+        else if(color=="ORANGE")
+        {
+          ctx.fillStyle="orange";
+        }
+        else {color=invalid; alert("Invalid color.")};
+        ctx.beginPath();
+        ctx.fillRect(10,10,100,50);
+        ctx.stroke();
+      }
+  };
+
+
+  (while color==invalid)
 
 /*
  * Exercise 4.
@@ -114,6 +146,6 @@ const drawFace = function() {
  * Exercise 6 (extra credit).
  */
 
-const drawPyramid = function() {
+const drawPyramid = function() {}
     // write your exercise 5 code here
-};
+;
