@@ -20,7 +20,7 @@ window.onload = function() {
 
     document.getElementById("hello").onclick = sayHello;
     document.getElementById("rectangle").onclick = rectangle;
-    document.getElementById("colored-rectangle").onclick = drawcoloredrectangle;
+    document.getElementById("drawcoloredrectangle").onclick = drawcoloredrectangle;
     document.getElementById("triangle").onclick = drawtriangle;
     document.getElementById("smile").onclick = drawsmile;
     document.getElementById("pyramid").onclick = drawpyramid
@@ -90,41 +90,52 @@ const rectangle = function() {
  * Exercise 3.
  */
 
-const drawColoredRectangle = function()
-{
-    var canvas = document.getElementById("student-canvas-3");
-    const ctx =canvas.getContext("2d");
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    do
-    {
-       var color = string.toUpperCase(prompt ("Color: "))
-        if(color=="BLACK")
-        {
-          ctx.fillStyle="black";
-        }
+const drawcoloredrectangle = function()
+{//
+  //
+    var canvas = document.getElementById("student-canvas-3");//
+    const ctx =canvas.getContext("2d");//
+    ctx.clearRect(0,0,canvas.width,canvas.height);//
+    do//
+    {//
+       var color = prompt ("Color: ")
+       color=color.toLowerCase()
+        if(color=="black")//
+        {//
+          ctx.fillStyle="black";//
+        }//
 
-        else if(color=="BLUE")
-        {
-          ctx.fillStyle="blue";
-        }
+        else if(color=="blue")//
+        {//
+          ctx.fillStyle="blue";//
+        }//
 
-        else if(color=="GREEN")
-        {
-          ctx.fillStyle="green";
+        else if(color=="green")//
+        {//
+          ctx.fillStyle="green";//
+        }//
+        else if(color=="orange")//
+        {//
+          ctx.fillStyle="orange";//
         }
-        else if(color=="ORANGE")
+        else if(color=="purple")
         {
-          ctx.fillStyle="orange";
+          ctx.fillStyle="purple"
         }
-        else {color=invalid; alert("Invalid color.")};
-        ctx.beginPath();
-        ctx.fillRect(10,10,100,50);
-        ctx.stroke();
-      }
-  };
-
-
-  (while color==invalid)
+        else if(color=="red")
+        {
+          ctx.fillStyle="red"
+        }
+        else if (color=="yellow")
+        {
+          ctx.fillStyle="yellow"
+        }
+        else  {alert(""+color+" is not a supported color.");color="invalid";ctx.fillStyle="white";};//
+        ctx.beginPath();//
+        ctx.fillRect(10,10,100,50);//
+        ctx.stroke();//
+      } while (color=="invalid")//
+    }
 
 /*
  * Exercise 4.
