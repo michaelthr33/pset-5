@@ -169,8 +169,14 @@ const drawTriangle = function()
   }
 if (hypotenuse==test)
 {
-  height=height+25
-  base=base+25
+  height=height+25;
+  base=base+25;
+  ctx.beginPath();
+  ctx.moveTo(25,25);
+  ctx.lineTo(25, height);
+  ctx.lineTo(base,height);
+  ctx.lineTo(25,25);
+  ctx.stroke();
 }
 
 /*
