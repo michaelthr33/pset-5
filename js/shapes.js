@@ -141,9 +141,37 @@ const drawcoloredrectangle = function()
  * Exercise 4.
  */
 
-const drawTriangle = function() {
-    // write your exercise 4 code here
-};
+const drawTriangle = function()
+{
+    var canvas = document.getElementById("student-canvas-4")
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    do
+    {
+      var sideone = Number(prompt ("Side 1: "))
+      var sidetwo = Number(prompt ("Side 2: "))
+      var sidethree = Number(prompt ("Side 3: "))
+
+      var hypotenuse=number.max(sideone,sidetwo,sidethree)
+      var height=number.min(sideone,sidetwo,sidethree)
+      var base=sideone+sidetwo+sidethree
+      base=base-hypotenuse-height
+      var test= math.hypot(base,height)
+      if (test>hypotenuse||test<hypotenuse)
+      {
+        alert("That's not a vaild right triangle.")
+      }
+      if (isNaN(sideone)||isNaN(sidetwo)||isNan(sidethree))
+      {
+        alert("One of your sides is not a number")
+      }
+    }while(test>hypotenuse||test<hypotenuse);
+  }
+if (hypotenuse==test)
+{
+  height=height+25
+  base=base+25
+}
 
 /*
  * Exercise 5.
