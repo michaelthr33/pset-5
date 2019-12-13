@@ -22,7 +22,7 @@ window.onload = function() {
     document.getElementById("rectangle").onclick = rectangle;
     document.getElementById("drawcoloredrectangle").onclick = drawcoloredrectangle;
     document.getElementById("drawtriangle").onclick = drawTriangle;
-    document.getElementById("smile").onclick = drawsmile;
+    document.getElementById("drawsmile").onclick = drawsmile;
     document.getElementById("pyramid").onclick = drawpyramid
 
 }
