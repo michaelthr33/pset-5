@@ -191,8 +191,39 @@ if (hypotenuse==test)
  * Exercise 5.
  */
 
-const drawFace = function() {
-    // write your exercise 4 code here
+const drawFace = function()
+{
+    const canvas = document.getElementById("student-canvas-5");
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    do
+    {
+      var radius = prompt("Radius: ")
+      if (radius<32)
+      {
+        alert("Your radius must be at least 32.")
+      }
+    if (radius>256)
+    {
+      alert("Your smiley face won't fit on the canvas.")
+    }
+
+  } while(radius>256||radius<32)
+    var eyes=0.15*radius
+    var mouth = 0.7*radius
+    ctx.beginPath()
+    ctx.arc(512,256,radius,0,0=2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.arc (512,256,mouth,0,Math.PI)
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath();
+    ctx.arc(512 + 0.4*radius, 256-0.4*radius,eyes,0,2*Math.PI);
+    ctx.stroke()
+    ctx.closePath()
 };
 
 /*
