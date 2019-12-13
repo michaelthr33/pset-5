@@ -21,7 +21,7 @@ window.onload = function() {
     document.getElementById("hello").onclick = sayHello;
     document.getElementById("rectangle").onclick = rectangle;
     document.getElementById("drawcoloredrectangle").onclick = drawcoloredrectangle;
-    document.getElementById("triangle").onclick = drawtriangle;
+    document.getElementById("drawtriangle").onclick = drawTriangle;
     document.getElementById("smile").onclick = drawsmile;
     document.getElementById("pyramid").onclick = drawpyramid
 
@@ -148,25 +148,31 @@ const drawTriangle = function()
     ctx.clearRect(0,0,canvas.width,canvas.height);
     do
     {
-      var sideone = Number(prompt ("Side 1: "))
-      var sidetwo = Number(prompt ("Side 2: "))
-      var sidethree = Number(prompt ("Side 3: "))
+      var sideone = prompt ("Side 1: ")
+      var sidetwo = prompt ("Side 2: ")
+      var sidethree = prompt ("Side 3: ")
 
-      var hypotenuse=number.max(sideone,sidetwo,sidethree)
-      var height=number.min(sideone,sidetwo,sidethree)
-      var base=sideone+sidetwo+sidethree
-      base=base-hypotenuse-height
-      var test= math.hypot(base,height)
-      if (test>hypotenuse||test<hypotenuse)
-      {
-        alert("That's not a vaild right triangle.")
-      }
-      if (isNaN(sideone)||isNaN(sidetwo)||isNan(sidethree))
+      if (isNaN(sideone)||isNaN(sidetwo)||isNaN(sidethree))
       {
         alert("One of your sides is not a number")
       }
+
+
+      sideone=Number(sideone);
+      sidetwo=Number(sidetwo);
+      sidethree=Number(sidethree);
+
+      var hypotenuse=Math.max(sideone,sidetwo,sidethree);
+      var height=Math.min(sideone,sidetwo,sidethree);
+      var base=sideone+sidetwo+sidethree;
+      base=base-hypotenuse-height;
+      var test= Math.hypot(base,height);
+      if (test>hypotenuse||test<hypotenuse);
+      {
+        alert("That's not a vaild right triangle.")
+      }
+
     }while(test>hypotenuse||test<hypotenuse);
-  }
 if (hypotenuse==test)
 {
   height=height+25;
@@ -177,6 +183,8 @@ if (hypotenuse==test)
   ctx.lineTo(base,height);
   ctx.lineTo(25,25);
   ctx.stroke();
+
+}
 }
 
 /*
