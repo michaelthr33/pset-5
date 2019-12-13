@@ -191,7 +191,7 @@ if (hypotenuse==test)
  * Exercise 5.
  */
 
-const drawFace = function()
+const drawsmile = function()
 {
     const canvas = document.getElementById("student-canvas-5");
     const ctx = canvas.getContext("2d");
