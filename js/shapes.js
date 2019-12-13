@@ -224,6 +224,10 @@ const drawsmile = function()
     ctx.arc(512 + 0.4*radius, 256-0.4*radius,eyes,0,2*Math.PI);
     ctx.stroke()
     ctx.closePath()
+    ctx.beginPath()
+    ctx.arc(512-0.4*radius, 256 -0.4*radius,eyes,0,2*Math.PI)
+    ctx.stroke()
+    ctx.closePath()
 };
 
 /*
