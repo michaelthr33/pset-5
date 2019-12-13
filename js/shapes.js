@@ -213,7 +213,7 @@ const drawsmile = function()
     var eyes=0.15*radius
     var mouth = 0.7*radius
     ctx.beginPath()
-    ctx.arc(512,256,radius,0,0=2*Math.PI)
+    ctx.arc(512,256,radius,0,2*Math.PI)
     ctx.stroke()
     ctx.closePath()
     ctx.beginPath()
